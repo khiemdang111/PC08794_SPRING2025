@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Client\HomeController as ClientHomeController;
 use App\Http\Controllers\Client\ProductController;
+use App\Http\Controllers\Client\SinhvienController;
 use App\Livewire\Posts\CreatePost;
 use App\Livewire\Posts\Posts;
 use App\Livewire\Posts\UpdatePost;
@@ -24,4 +25,5 @@ Route::get('/post/create', CreatePost::class);
 Route::get('/post', Posts::class);
 Route::get('post/edit/{post}', UpdatePost::class);
 Route::get('todos', Todos::class);
+Route::get('/sinhvien', [SinhvienController::class, 'index']);
 
