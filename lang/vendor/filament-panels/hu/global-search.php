@@ -3,10 +3,10 @@
 return [
 
     'field' => [
-        'label' => 'Globális keresés',
-        'placeholder' => 'Keresés',
+        'label'       => 'Globális keresés',
+        'placeholder' => 'Keres',
     ],
 
-    'no_results_message' => 'Nincs találat.',
+    'no_results_message' => 'Nincs találat',
 
 ];
