@@ -8,17 +8,21 @@
 
     <link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
         rel="stylesheet">
+    @vite('resources/css/app.css')
+    <script src="https://cdn.tailgrids.com/tailgrids.min.js"></script>
     @livewireStyles
 </head>
 
 <body>
     <!-- Header -->
+    @include('partials.header')
     <!-- Nội dung chính -->
-    <main class="min-h-screen py-8">
+    <main class="min-h-screen">
         @yield('content')
     </main>
 
     <!-- Footer -->
+    @include('partials.footer')
     @livewireScripts
 </body>
 
