@@ -1,5 +1,5 @@
 <div>
-   <footer class="text-white px-8 py-6 bg-gray-800">
+   <footer class="text-white px-8 py-6 bg-black">
       <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
           <div class="mb-8 md:mb-0">
               <h3 class="text-lg font-bold mb-4">Địa chỉ:</h3>

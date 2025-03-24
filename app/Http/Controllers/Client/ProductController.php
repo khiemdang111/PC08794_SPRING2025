@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function detail($slug){
-        // Your logic to retrieve product details goes here
-        return view('client.product.detail', compact('slug'));
+    public function detail($id){
+        $data = Product::find($id);
+        return view('livewire.pages.products.detail', compact('data'));
     }
 }

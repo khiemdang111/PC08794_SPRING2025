@@ -14,15 +14,11 @@
 </head>
 
 <body>
-    <!-- Header -->
-    @include('partials.header')
     <!-- Nội dung chính -->
     <main class="min-h-screen">
         @yield('content')
     </main>
 
-    <!-- Footer -->
-    @include('partials.footer')
     @livewireScripts
 </body>
 
