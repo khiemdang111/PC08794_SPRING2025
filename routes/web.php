@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Client\Auth\AuthController;
 use App\Http\Controllers\Client\HomeController as ClientHomeController;
 use App\Http\Controllers\Client\ProductController;
 use App\Http\Controllers\Client\SinhvienController;
 use App\Livewire\Auth\Login;
+use App\Livewire\Auth\Logout;
 use App\Livewire\Auth\Register;
 use App\Livewire\Index;
 use App\Livewire\Pages\Products\Index as ProductsIndex;
@@ -13,8 +15,8 @@ use App\Livewire\Posts\Posts;
 use App\Livewire\Posts\UpdatePost;
 use App\Livewire\Todos\Todos;
 use GuzzleHttp\Promise\Create;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
 //    $query = DB::table('users')->select('id');
@@ -23,8 +25,9 @@ use Illuminate\Support\Facades\DB;
 Route::get('/', Index::class);
 Route::get('/product', ProductsIndex::class)->name('product.index');
 Route::get('/product/{id}', [ProductController::class, 'detail'])->name('product.detail');
-Route::get('/login/user', Login::class)->name('login.user');
-Route::get('/register', Register::class)->name('register.user');
+Route::get('/login/user', [AuthController::class, 'login'])->name('login.user');
+Route::get('/logout', [Logout::class, 'logout'] )->name('logout.user');
+Route::get('/register', [AuthController::class, 'register'])->name('register.user');
 Route::get('/chi-tiet-sp/{slug}', [ProductController::class, 'detail']);
 Route::get('/list', function () {
    return '<h1>List</h1>';
