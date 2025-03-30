@@ -13,4 +13,9 @@ class AuthController extends Controller
     public function login(){
         return view('client.auth.login');
     }
+    public function editUser($id) {
+        return view('client.auth.profileuser', [
+            'id' => $id
+        ]);
+    }
 }

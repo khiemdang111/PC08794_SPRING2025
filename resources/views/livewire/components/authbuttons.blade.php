@@ -22,7 +22,7 @@
                 <div class="rounded-lg bg-base-300 drop-shadow-xl divide-y divide-neutral">
                     <div aria-label="navigation">
                         <nav class="grid gap-1">
-                            <a href="/"
+                            <a href="/profile/{{ $user->id }}"
                                 class="flex items-center leading-6 space-x-1 w-full text-lg text-gray-600 focus:outline-none hover:bg-gray-100 rounded-md">
                                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
