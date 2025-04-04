@@ -18,4 +18,7 @@ class AuthController extends Controller
             'id' => $id
         ]);
     }
+    public function forgotPassword(){
+        return view('client.auth.forgotpassword');
+    }
 }

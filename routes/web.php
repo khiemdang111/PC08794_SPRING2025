@@ -5,10 +5,12 @@ use App\Http\Controllers\Client\Auth\AuthController;
 use App\Http\Controllers\Client\HomeController as ClientHomeController;
 use App\Http\Controllers\Client\ProductController;
 use App\Http\Controllers\Client\SinhvienController;
+use App\Livewire\Auth\ForgotPassword;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Logout;
 use App\Livewire\Auth\ProfileUser;
 use App\Livewire\Auth\Register;
+use App\Livewire\Auth\ResetPassword;
 use App\Livewire\Index;
 use App\Livewire\Pages\Products\Index as ProductsIndex;
 use App\Livewire\Posts\CreatePost;
@@ -29,6 +31,8 @@ Route::get('/product/{id}', [ProductController::class, 'detail'])->name('product
 Route::get('/login/user', [AuthController::class, 'login'])->name('login.user');
 Route::get('/logout', [Logout::class, 'logout'] )->name('logout.user');
 Route::get('/register', [AuthController::class, 'register'])->name('register.user');
+Route::get('/forgot-password', [AuthController::class, 'forgotPassword'])->name('password.request');
+Route::get('/reset-password/{token}', ResetPassword::class)->name('password.reset');
 Route::get('/profile/{id}', [AuthController::class, 'editUser'])->name('profile.user');
 Route::get('/chi-tiet-sp/{slug}', [ProductController::class, 'detail']);
 Route::get('/list', function () {

@@ -27,6 +27,9 @@
                     @error('email')
                         <span class="text-red-500">{{ $message }}</span>
                     @enderror
+                    <div class="mb-3">
+                        <p><a href="/forgot-password" class="text-white">Quên mật khẩu?</a></p>
+                    </div>
                     <div className="mt-5">
                         <button
                             class="py-1 px-8 bg-blue-500 hover:bg-blue-800 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer select-none">Đăng

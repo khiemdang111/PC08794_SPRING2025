@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('content');
-            $table->decimal('price', 8, 2);
+            $table->decimal('price', 8, 2);// 1000000.00
             $table->decimal('sale_price', 8, 2);
             $table->string('thumbnail');
             $table->unsignedBigInteger('category_id');
