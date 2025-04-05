@@ -44,3 +44,4 @@ Route::get('post/edit/{post}', UpdatePost::class);
 Route::get('todos', Todos::class);
 Route::get('/sinhvien', [SinhvienController::class, 'index']);
 
+Route::post('/binhluan/{id}', [ProductController::class, 'comment'])->name('commentproduct');
