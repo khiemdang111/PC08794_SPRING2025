@@ -5,6 +5,7 @@ use App\Http\Controllers\Client\Auth\AuthController;
 use App\Http\Controllers\Client\HomeController as ClientHomeController;
 use App\Http\Controllers\Client\ProductController;
 use App\Http\Controllers\Client\SinhvienController;
+use App\Http\Middleware\CommentMiddleware;
 use App\Livewire\Auth\ForgotPassword;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Logout;
@@ -44,4 +45,4 @@ Route::get('post/edit/{post}', UpdatePost::class);
 Route::get('todos', Todos::class);
 Route::get('/sinhvien', [SinhvienController::class, 'index']);
 
-Route::post('/binhluan/{id}', [ProductController::class, 'comment'])->name('commentproduct');
+Route::post('/binhluan/{id}', [ProductController::class, 'comment'])->middleware(CommentMiddleware::class)->name('commentproduct');
